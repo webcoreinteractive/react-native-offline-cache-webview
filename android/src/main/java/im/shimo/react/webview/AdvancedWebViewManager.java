@@ -18,6 +18,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.webkit.GeolocationPermissions;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -44,6 +46,13 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
+
+
+import ren.yale.android.cachewebviewlib.WebViewCacheInterceptor;
+import ren.yale.android.cachewebviewlib.WebViewCacheInterceptorInst;
+
+
+
 
 public class AdvancedWebViewManager extends ReactWebViewManager {
 
@@ -148,6 +157,10 @@ public class AdvancedWebViewManager extends ReactWebViewManager {
 
         public AdvancedWebView(ThemedReactContext reactContext) {
             super(reactContext);
+            Context context = reactContext.getApplicationContext();
+
+            WebViewCacheInterceptorInst.getInstance().init(new WebViewCacheInterceptor.Builder(context));
+
             mNativeModule = reactContext.getNativeModule(UIManagerModule.class);
             mEventEmitter = reactContext.getJSModule(RCTDeviceEventEmitter.class);
         }
@@ -679,6 +692,12 @@ public class AdvancedWebViewManager extends ReactWebViewManager {
             if (isReload) {
                 super.doUpdateVisitedHistory(webView, url, true);
             }
+        }
+
+        // WebViewCache Code
+        @Override
+        public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
+            return WebViewCacheInterceptorInst.getInstance().interceptRequest(request);
         }
 
     }

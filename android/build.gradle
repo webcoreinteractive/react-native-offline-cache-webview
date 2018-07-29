@@ -4,19 +4,19 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'com.android.tools.build:gradle:2.3.3'
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '25.0.0'
+    compileSdkVersion = 26
+    buildToolsVersion = "26.0.3"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
     }
@@ -29,12 +29,18 @@ repositories {
     mavenLocal()
     jcenter()
     maven {
+
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url "$projectDir/../../../node_modules/react-native/android"
+
+    }
+    maven {
+        url "https://dl.bintray.com/yale8848/maven/"
     }
 }
 
 dependencies {
     compile 'com.facebook.react:react-native:+'
+    compile 'ren.yale.android:cachewebviewlib:2.0.2'
     compile fileTree( dir: "libs", includes: ['*.jar'] )
 }
