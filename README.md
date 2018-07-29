@@ -1,20 +1,47 @@
-# react-native-advanced-webview
+# react-native-offline-cache-webview
 
 ## Features
-extended WebView with more advanced WebView features
+Offline cache enabled WebView, works only for Android at this point, support for iOS need to be added.
 
-* initialJavaScript
-Same as `injectedJavaScript` prop but will execute the JavaScript code on page loading started instead of on page loading finished
-
-* allowFileAccessFromFileURLs
-
+iOS | Android
+------- | ----
+TODO | <img title="Android" src="https://i.imgur.com/FNlkjkO.png" width="350">
 
 
 ## Install
 
 ```bash
-npm i react-native-advanced-webview --save
-react-native link react-native-advanced-webview
+npm i react-native-offline-cache-webview --save
+react-native link react-native-offline-cache-webview
 ```
 
+## Usage
+```javascript
+import OfflineCacheWebView from 'react-native-offline-cache-webview';
+export default class webview extends Component {
+    render() {
+        return (
+            <OfflineCacheWebView
+                style={styles.webview}
+                source={{uri: 'http://facebook.github.io/react-native/blog/2018/06/14/state-of-react-native-2018'}}
+            />
+        );
+    }
+}
+```
+### Example
+* A fully working [example](https://github.com/zhangtaii/react-native-offline-cache-webview/tree/master/example)
 
+
+### Credits
+Thanks following repositories' inspiration/help:
+
+* [react-native-create-library](https://github.com/frostney/react-native-create-library)
+* [react-native-advanced-webview](https://github.com/magicismight/react-native-advanced-webview)
+* [CacheWebView](https://github.com/yale8848/CacheWebView)
+* [RNCachingURLProtocol](https://github.com/rnapier/RNCachingURLProtocol)
+
+
+### License
+
+Code in this git repo is licensed MIT.

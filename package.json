@@ -1,10 +1,10 @@
 {
-  "name": "react-native-advanced-webview",
-  "version": "0.62.0",
-  "description": "A WebView component for react-native more advanced features",
+  "name": "react-native-offline-cache-webview",
+  "version": "0.1.0",
+  "description": "Offline cache enabled WebView",
   "repository": {
     "type": "git",
-    "url": "https://github.com/magicismight/react-native-advanced-webview"
+    "url": "git+https://zhangtaii/react-native-offline-cache-webview.git"
   },
   "license": "MIT",
   "main": "./WebView",
@@ -15,7 +15,10 @@
     "cookie",
     "jsbridge",
     "ios",
-    "android"
+    "android",
+    "offline",
+    "cache",
+    "website"
   ],
   "scripts": {
     "lint": "eslint ./"
@@ -29,5 +32,13 @@
     "react-native": ">=0.46.0",
     "react": "16.0.0-alpha.12",
     "prop-types": "^15.5.8"
-  }
+  },
+  "bugs": {
+    "url": "https://zhangtaii/react-native-offline-cache-webview/issues"
+  },
+  "homepage": "https://zhangtaii/react-native-offline-cache-webview#readme",
+  "directories": {
+    "example": "example"
+  },
+  "author": "zhangtaii"
 }

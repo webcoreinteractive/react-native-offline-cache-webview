@@ -4120,8 +4120,8 @@ react-is@^16.4.1:
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.1.tgz#d624c4650d2c65dbd52c72622bbf389435d9776e"
 
-react-native-advanced-webview@../:
-  version "0.62.0"
+react-native-offline-cache-webview@../:
+  version "0.1.0"
 
 react-native@0.56.0:
   version "0.56.0"
