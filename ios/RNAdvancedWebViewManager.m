@@ -9,6 +9,9 @@
 
 #import <WebKit/WebKit.h>
 
+#import "RNCachingURLProtocol.h"
+
+
 @interface RNAdvancedWebViewManager () <RNAdvancedWebViewDelegate>
 
 @end
@@ -23,6 +26,8 @@ RCT_EXPORT_MODULE()
 
 - (UIView *)view
 {
+    [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
+
     RNAdvancedWebView *webView = [[RNAdvancedWebView alloc] initWithProcessPool:[[WKProcessPool alloc] init]];
     webView.delegate = self;
     return webView;
