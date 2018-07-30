@@ -47,8 +47,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
-
-import ren.yale.android.cachewebviewlib.WebViewCacheInterceptor;
 import ren.yale.android.cachewebviewlib.WebViewCacheInterceptorInst;
 
 
@@ -157,10 +155,6 @@ public class AdvancedWebViewManager extends ReactWebViewManager {
 
         public AdvancedWebView(ThemedReactContext reactContext) {
             super(reactContext);
-            Context context = reactContext.getApplicationContext();
-
-            WebViewCacheInterceptorInst.getInstance().init(new WebViewCacheInterceptor.Builder(context));
-
             mNativeModule = reactContext.getNativeModule(UIManagerModule.class);
             mEventEmitter = reactContext.getJSModule(RCTDeviceEventEmitter.class);
         }
