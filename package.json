@@ -1,6 +1,6 @@
 {
   "name": "react-native-offline-cache-webview",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Offline cache enabled WebView",
   "repository": {
     "type": "git",
