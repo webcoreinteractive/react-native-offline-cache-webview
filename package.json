@@ -4,7 +4,7 @@
   "description": "Offline cache enabled WebView",
   "repository": {
     "type": "git",
-    "url": "git+https://zhangtaii/react-native-offline-cache-webview.git"
+    "url": "git+https://github.com/zhangtaii/react-native-offline-cache-webview.git"
   },
   "license": "MIT",
   "main": "./WebView",
@@ -34,9 +34,9 @@
     "prop-types": "^15.5.8"
   },
   "bugs": {
-    "url": "https://zhangtaii/react-native-offline-cache-webview/issues"
+    "url": "https://github.com/zhangtaii/react-native-offline-cache-webview/issues"
   },
-  "homepage": "https://zhangtaii/react-native-offline-cache-webview#readme",
+  "homepage": "https://github.com/zhangtaii/react-native-offline-cache-webview#readme",
   "directories": {
     "example": "example"
   },
