@@ -1,11 +1,11 @@
 # react-native-offline-cache-webview
 
 ## Features
-Offline cache enabled WebView, works only for Android at this point, support for iOS need to be added.
+Offline cache enabled WebView, works for Android and iOS.
 
 iOS | Android
 ------- | ----
-TODO | <img title="Android" src="https://i.imgur.com/FNlkjkO.png" width="350">
+<img title="Android" src="https://i.imgur.com/81c9Gn5.png" width="350"> | <img title="Android" src="https://i.imgur.com/FNlkjkO.png" width="350">
 
 
 ## Install
@@ -30,7 +30,14 @@ export default class webview extends Component {
 }
 ```
 ### Example
-* A fully working [example](https://github.com/zhangtaii/react-native-offline-cache-webview/tree/master/example)
+* Check it [here](https://github.com/zhangtaii/react-native-offline-cache-webview/tree/master/example)
+
+
+### TODO
+
+* `offlineCacheMode` property to control `on/off` for cache usage
+* `prefetch` method for caching url by advance
+* `clearCache` method
 
 
 ### Credits
@@ -40,8 +47,3 @@ Thanks following repositories' inspiration/help:
 * [react-native-advanced-webview](https://github.com/magicismight/react-native-advanced-webview)
 * [CacheWebView](https://github.com/yale8848/CacheWebView)
 * [RNCachingURLProtocol](https://github.com/rnapier/RNCachingURLProtocol)
-
-
-### License
-
-Code in this git repo is licensed MIT.
