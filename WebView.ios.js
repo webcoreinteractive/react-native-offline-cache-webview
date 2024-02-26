@@ -1,6 +1,7 @@
 import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
-import { WebView, UIManager, requireNativeComponent } from 'react-native';
+import { UIManager, requireNativeComponent } from 'react-native';
+import { WebView } from 'react-native-webview';
 
 export default class extends WebView {
 
