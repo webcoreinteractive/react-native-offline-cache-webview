@@ -30,6 +30,7 @@
   },
   "peerDependencies": {
     "react-native": ">=0.46.0",
+    "react-native-webview": "^13.8.1",
     "react": ">=16.0.0",
     "prop-types": "^15.5.8"
   },
